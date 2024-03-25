@@ -1,6 +1,0 @@
-# Exemplo
-## Exemplo
-### Exemplo
-- Traço
-
-
