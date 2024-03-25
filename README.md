@@ -1,3 +1,3 @@
 # Exemplo
-. Item
+-- Item
 ### Exemplo
