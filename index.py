@@ -41,6 +41,7 @@ def cadastrar_candidato(lista_candidatos_notas,lista_candidatos_nomes):
 # OPÇÃO 1.1: BUSCA OS CANDIDATOS NA LISTA NO FORMATO 'eX_tX_pX_sX'
 def busca_candidatos_string(string):
     candidatos_classificados = []
+    # Acessa cada conteúdo das listas simultaneamente, e roda em loop inserindo cada valor nas variáveis nome e nota
     for nome, nota in zip(lista_candidatos_nomes, lista_candidatos_notas):
         if nota == string:
             candidatos_classificados.append((nome, nota))
@@ -51,10 +52,12 @@ def busca_candidatos(nota_entrevista, nota_teorico, nota_pratica, nota_soft):
     #Lista que vai receber os candidatos classificados
     candidatos_classificados = []
     for nome, nota in zip(lista_candidatos_nomes, lista_candidatos_notas):
-        # Verificar se atende aos critérios
+        # Recebe as notas descompactadas
         e, t, p, s = descompactar_nota(nota)
+        # Verificar se atende aos critérios
         if e >= nota_entrevista and t >= nota_teorico and p >= nota_pratica and s >= nota_soft:
             candidatos_classificados.append((nome, nota))
+    # Retorna uma lista com todos os candidatos que atendem os requisitos
     return candidatos_classificados
 
 # EXIBE OS CANDIDATOS CLASSIFICADOS NA TELA
@@ -62,8 +65,10 @@ def exibir_classificados(candidatos_classificados):
     if candidatos_classificados:
         print("\nOs seguintes candidatos atendem aos critérios especificados:")
         for nome, nota in candidatos_classificados:
+            # Recebe as notas descompactadas
             e, t, p, s = descompactar_nota(nota)
             print("----------------------------------------------")
+            # Imprimi o nome do candidato, a nota formatada e as notas individualmente
             print(f"{nome}\nNota: {nota}\nEntrevista: {e}\nTeste Teórico: {t}\nTeste prático: {p}\nAvaliação de soft skills: {s}")
     else:
         print("\nNenhum candidato atende aos critérios especificados.")
