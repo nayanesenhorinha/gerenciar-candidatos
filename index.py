@@ -134,9 +134,11 @@ while True:
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")    
 
+    # OPÇÃO QUE ENCERRA O PROGRAMA
     elif opcao == "3":
         print("Encerrando o programa.")
         break
 
+    # CASO O USUÁRIO DIGITE UMA OPÇÃO INVÁLIDA 
     else:
         print("Opção inválida. Por favor, escolha uma opção válida.")
