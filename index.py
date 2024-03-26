@@ -88,18 +88,21 @@ while True:
     print("3 - Sair")
 
     opcao = input("Escolha uma opção: ")
-    
+
+    # SUBMENU 1
     if opcao == "1":
         print("\nComo deseja consultar as notas?")
         print("1 - Formato eX_tX_pX_sX")
         print("2 - Inserir notas individualmente")
         opcao2 = input("Escolha uma opção: ")
 
+        # OPÇÃO 1.1
         if opcao2 == "1":
             nota = input("Digite a nota: ")
             candidatos_classificados = busca_candidatos_string(nota)
             exibir_classificados(candidatos_classificados)
 
+        # OPÇÃO 1.2
         elif opcao2 == "2":
             nota_entrevista = int(input("Digite a nota mínima da entrevista: "))
             nota_teorico = int(input("Digite a nota mínima do teste teórico: "))
@@ -112,15 +115,19 @@ while True:
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
+    # SUBMENU 2
     elif opcao == "2":
         print("\nComo deseja inserir as notas?")
         print("1 - Formato eX_tX_pX_sX")
         print("2 - Inserir notas individualmente")
         opcao3 = input("Escolha uma opção: ")
 
+        # OPÇÃO 2.1
         if opcao3 == "1":
             cadastrar_candidato_string(lista_candidatos_notas,lista_candidatos_nomes)
             print("\nNovo candidato cadastrado com sucesso.")
+
+        # OPÇÃO 2.2
         elif opcao3 == "2":
             cadastrar_candidato(lista_candidatos_notas,lista_candidatos_nomes)
             print("\nNovo candidato cadastrado com sucesso.")
