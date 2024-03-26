@@ -38,4 +38,4 @@ O aplicativo também possui funções para descompactar as notas no formato 'eX_
 1. Clone ou baixe este repositório para sua máquina.
 2. Execute o arquivo index.py em um ambiente Python.
 3. Siga as instruções do menu para buscar candidatos por critérios ou cadastrar novos candidatos.
-Este aplicativo é útil para empresas que desejam automatizar o processo de seleção de candidatos e facilitar a análise de seus desempenhos em diferentes etapas do processo seletivo.
+
