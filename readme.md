@@ -1,16 +1,14 @@
-﻿# Proj
+﻿# Aplicativo de Gerenciamento de Candidatos
+Este é um aplicativo desenvolvido em Python para gerenciar candidatos e suas notas em um processo seletivo. O aplicativo permite buscar candidatos por critérios específicos de nota em diferentes etapas do processo seletivo e também cadastrar novos candidatos.
 
-Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
-Oi! Meu nome é Nayane e sou aluno do curso Programadores Cariocas no Mercado Segurador. 
-
-# Contexto
+## Contexto
 Uma startup está desenvolvendo um **aplicativo** que **verifica a compatibilidade de um candidato com uma vaga** de acordo com seu resultado nas etapas do processo seletivo.
 Para isso foi criado um teste que devolve uma string no seguinte formato: **eX_tX_pX_sX** (sendo que cada X é substituído pela avaliação da pessoa em uma das etapas do processo - entrevista, teste teórico, teste prático e avaliação de soft skills).
 
-## O que é para fazer?
+### O que é para fazer?
 **Criar com Python uma lista para armazenar esses resultados** (e outros resultados que quiser no mesmo formato, o código precisa funcionar para qualquer lista que seja inserida nesse formato) e depois **uma função que busca o candidato de acordo com os critérios digitados pelo usuário**.
 
-## Como fazer?
+### Como fazer?
 Você deve criar com Python uma lista para armazenar esses resultados (e outros resultados que quiser no mesmo formato, o código precisa funcionar para qualquer lista que seja inserida nesse formato) e depois uma função que busca o candidato de acordo com os critérios digitados pelo usuário. O usuário vai informar qual a nota mínima de e, t, p e s que ele deseja buscar, nossa aplicação deve listar quem são os candidatos disponíveis com nota maior ou igual a essas informadas pelo usuário.
 Ao buscar por alguém com resultados 4,4,8,8 por exemplo vamos receber que os candidatos 1 e 5 atendem esse critério, foram bem no teste prático e apresentaram um ótimo nível de soft skills!
 
@@ -24,13 +22,17 @@ Temos a seguinte lista de candidatos como exemplo e os resultados:
 | Candidato 4          | e2_t2_p2_s1       |
 | Candidato 5          | e10_t10_p8_s9     |
 
-# Resultados
-A aplicação exibe um menu com três opções:
-- Buscar candidatos por critérios: o usuário pode definir notas de corte, inserindo cada nota individualmente (entrevista, teste teórico, teste prático e avaliação de soft skills) ou no formato eX_tX_pX_sX.
-- Cadastrar um novo candidato: o usuário pode consultar cada nota ndividualmente (entrevista, teste teórico, teste prático e avaliação de soft skills) ou no formato eX_tX_pX_sX.
-- Encerrar o programa
-
-As informações, notas e nomes, ficam armazenadas em listas na aplicação. A aplicação compacta (e4_t4_p8_s8) e descompacta (4,4,8,8) as notas para fornecer ao usuários opção de lidar com os dados da forma como ele quiser, mas nas listas, os dados são armazenados seguindo o padrão estabelecido (eX_tX_pX_sX)
-
-## Instalação
-A aplicação é simples e pode ser compilada em qualquer IDE para Python.
+## Funcionalidade
+### Buscar candidatos por critérios
+- **Busca por nota no formato "eX_tX_pX_sX"**: o usuário pode inserir uma nota no formato 'eX_tX_pX_sX' e o aplicativo retornará os candidatos que possuem exatamente essa nota em todas as etapas do processo seletivo.
+- **Busca por notas individuais**: o usuário pode inserir as notas mínimas desejadas para cada etapa do processo seletivo (entrevista, teste teórico, teste prático e avaliação de soft skills) e o aplicativo retornará os candidatos que atendem a esses critérios.
+### Cadastrar novo candidato
+- **Cadastrar com nota no formato "eX_tX_pX_sX"**: o usuário pode inserir o nome do candidato e sua nota no formato "eX_tX_pX_sX" para cadastrá-lo no sistema.
+- **Cadastrar com notas individuais**: o usuário pode inserir o nome do candidato e suas notas individuais para cada etapa do processo seletivo para cadastrá-lo no sistema.
+### Outras Funcionalidades
+O aplicativo também possui funções para descompactar as notas no formato 'eX_tX_pX_sX' e exibir os candidatos classificados na tela.
+## Como Usar
+1. Clone ou baixe este repositório para sua máquina.
+2. Execute o arquivo main.py em um ambiente Python.
+3. Siga as instruções do menu para buscar candidatos por critérios ou cadastrar novos candidatos.
+Este aplicativo é útil para empresas que desejam automatizar o processo de seleção de candidatos e facilitar a análise de seus desempenhos em diferentes etapas do processo seletivo.
