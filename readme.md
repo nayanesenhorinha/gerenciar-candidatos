@@ -25,9 +25,10 @@ Temos a seguinte lista de candidatos como exemplo e os resultados:
 | Candidato 5          | e10_t10_p8_s9     |
 
 # Resultados
-A aplicação exive um menu com três opções:
-> Buscar candidatos por critérios: o usuário pode definir notas de corte, inserindo cada nota individualmente (entrevista, teste teórico, teste prático e avaliação de soft skills) ou no formato eX_tX_pX_sX.
-> Cadastrar um novo candidato: o usuário pode consultar cada nota ndividualmente (entrevista, teste teórico, teste prático e avaliação de soft skills) ou no formato eX_tX_pX_sX.
+A aplicação exibe um menu com três opções:
+- Buscar candidatos por critérios: o usuário pode definir notas de corte, inserindo cada nota individualmente (entrevista, teste teórico, teste prático e avaliação de soft skills) ou no formato eX_tX_pX_sX.
+- Cadastrar um novo candidato: o usuário pode consultar cada nota ndividualmente (entrevista, teste teórico, teste prático e avaliação de soft skills) ou no formato eX_tX_pX_sX.
+- Encerrar o programa
 
 As informações, notas e nomes, ficam armazenadas em listas na aplicação. A aplicação compacta (e4_t4_p8_s8) e descompacta (4,4,8,8) as notas para fornecer ao usuários opção de lidar com os dados da forma como ele quiser, mas nas listas, os dados são armazenados seguindo o padrão estabelecido (eX_tX_pX_sX)
 
