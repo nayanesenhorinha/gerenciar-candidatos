@@ -1,6 +1,7 @@
 ﻿# Proj
 
 Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.
+Oi! Meu nome é Nayane e sou aluno do curso Programadores Cariocas no Mercado Segurador. 
 
 # Contexto
 Uma startup está desenvolvendo um **aplicativo** que **verifica a compatibilidade de um candidato com uma vaga** de acordo com seu resultado nas etapas do processo seletivo.
@@ -24,5 +25,11 @@ Temos a seguinte lista de candidatos como exemplo e os resultados:
 | Candidato 5          | e10_t10_p8_s9     |
 
 # Resultados
+A aplicação exive um menu com três opções:
+> Buscar candidatos por critérios: o usuário pode definir notas de corte, inserindo cada nota individualmente (entrevista, teste teórico, teste prático e avaliação de soft skills) ou no formato eX_tX_pX_sX.
+> Cadastrar um novo candidato: o usuário pode consultar cada nota ndividualmente (entrevista, teste teórico, teste prático e avaliação de soft skills) ou no formato eX_tX_pX_sX.
 
-> Written with [StackEdit](https://stackedit.io/).
+As informações, notas e nomes, ficam armazenadas em listas na aplicação. A aplicação compacta (e4_t4_p8_s8) e descompacta (4,4,8,8) as notas para fornecer ao usuários opção de lidar com os dados da forma como ele quiser, mas nas listas, os dados são armazenados seguindo o padrão estabelecido (eX_tX_pX_sX)
+
+## Instalação
+A aplicação é simples e pode ser compilada em qualquer IDE para Python.
