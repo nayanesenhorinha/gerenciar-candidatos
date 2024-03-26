@@ -1,5 +1,8 @@
 ﻿# Aplicativo de Gerenciamento de Candidatos
-Este é um aplicativo desenvolvido em Python para gerenciar candidatos e suas notas em um processo seletivo. O aplicativo permite buscar candidatos por critérios específicos de nota em diferentes etapas do processo seletivo e também cadastrar novos candidatos.
+Este aplicativo foi desenvolvido como parte do curso de Analista de Dados oferecido pelo Senac Rio, em parceria com a Prefeitura do Rio de Janeiro e a CNseg, no programa "Programadores Cariocas no Mercado Segurador".
+
+## Sobre o projeto
+O aplicativo em Python foi desenvolvido para gerenciar candidatos e suas notas em um processo seletivo. Ele permite buscar candidatos por critérios de nota em diferentes etapas e também cadastrar novos candidatos.
 
 ## Contexto
 Uma startup está desenvolvendo um **aplicativo** que **verifica a compatibilidade de um candidato com uma vaga** de acordo com seu resultado nas etapas do processo seletivo.
