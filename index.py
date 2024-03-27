@@ -39,15 +39,16 @@ def busca_candidatos(nota_entrevista, nota_teorico, nota_pratica, nota_soft):
 
 # OPÇÃO 2.1: CADASTRAR NOVO CANDIDATO COM STRING
 def cadastrar_candidato_string(lista_candidatos_notas,lista_candidatos_nomes):
-    nome = input("Informe o nome do candidato: ")
-    nota = input("Insira a nota das entrevista (formato eX_tX_pX_sX): ")
+    nome = input("\nInforme o nome do candidato: ")
+    nota = input("Insira a nota da entrevista (formato eX_tX_pX_sX): ")
     lista_candidatos_nomes.append(nome)
     lista_candidatos_notas.append(nota)
+    print("\nNovo candidato cadastrado com sucesso.")
 
 # OPÇÃO 2.2: CADASTRAR NOVO CANDIDATO COM NOTAS INDIVIDUAIS
 def cadastrar_candidato(lista_candidatos_notas,lista_candidatos_nomes):
     #Inputs para entrada de dados
-    nome = input("Informe o nome do candidato: ")
+    nome = input("\nInforme o nome do candidato: ")
     nota_e = int(input('Digite a nota da entrevista: '))
     nota_t = int(input('Digite a nota do teste teórico: '))
     nota_p = int(input('Digite a nota do teste prático: '))
@@ -57,6 +58,7 @@ def cadastrar_candidato(lista_candidatos_notas,lista_candidatos_nomes):
     #Adiciona o nome e a string com as notas nas listas
     lista_candidatos_nomes.append(nome)
     lista_candidatos_notas.append(nota)
+    print("\nNovo candidato cadastrado com sucesso.")
 
 # DESCOMPACTA AS NOTAS: FORMATO EX_TX_PX_SX PARA [X,X,X,X]
 def descompactar_nota(nota):
@@ -80,6 +82,18 @@ def exibir_classificados(candidatos_classificados):
     else:
         print("\nNenhum candidato atende aos critérios especificados.")
 
+# EXIBI OS SUBMENUS
+def submenu(operacao):
+    if operacao == "1":
+        mensagem = "Como deseja buscar os candidatos?"
+    elif operacao == "2":
+        mensagem = "Como deseja cadastrar as notas?"
+    print(f"\n{mensagem}")
+    print("1 - Formato eX_tX_pX_sX")
+    print("2 - Inserir notas individualmente")
+    opcao = input("Escolha uma opção: ")
+    return opcao
+
 # MENU 
 while True:
     print("\nMENU:")
@@ -88,57 +102,37 @@ while True:
     print("3 - Sair")
 
     opcao = input("Escolha uma opção: ")
-
-    # SUBMENU 1
+    
     if opcao == "1":
-        print("\nComo deseja consultar as notas?")
-        print("1 - Formato eX_tX_pX_sX")
-        print("2 - Inserir notas individualmente")
-        opcao2 = input("Escolha uma opção: ")
-
-        # OPÇÃO 1.1
-        if opcao2 == "1":
-            nota = input("Digite a nota: ")
+        opcao = submenu("1")
+        if opcao == "1":
+            nota = input("\nDigite a nota: ")
             candidatos_classificados = busca_candidatos_string(nota)
             exibir_classificados(candidatos_classificados)
 
-        # OPÇÃO 1.2
-        elif opcao2 == "2":
-            nota_entrevista = int(input("Digite a nota mínima da entrevista: "))
+        elif opcao == "2":
+            nota_entrevista = int(input("\nDigite a nota mínima da entrevista: "))
             nota_teorico = int(input("Digite a nota mínima do teste teórico: "))
             nota_pratica = int(input("Digite a nota mínimia do teste prático: "))
             nota_soft = int(input("Digite a nota mínima da avaliação de soft skills: "))
-
             candidatos_classificados = busca_candidatos(nota_entrevista, nota_pratica, nota_teorico, nota_soft)
             exibir_classificados(candidatos_classificados)
 
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
 
-    # SUBMENU 2
     elif opcao == "2":
-        print("\nComo deseja inserir as notas?")
-        print("1 - Formato eX_tX_pX_sX")
-        print("2 - Inserir notas individualmente")
-        opcao3 = input("Escolha uma opção: ")
-
-        # OPÇÃO 2.1
-        if opcao3 == "1":
+        opcao = submenu("2")
+        if opcao == "1":
             cadastrar_candidato_string(lista_candidatos_notas,lista_candidatos_nomes)
-            print("\nNovo candidato cadastrado com sucesso.")
-
-        # OPÇÃO 2.2
-        elif opcao3 == "2":
+        elif opcao == "2":
             cadastrar_candidato(lista_candidatos_notas,lista_candidatos_nomes)
-            print("\nNovo candidato cadastrado com sucesso.")
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")    
 
-    # OPÇÃO QUE ENCERRA O PROGRAMA
     elif opcao == "3":
         print("Encerrando o programa.")
         break
 
-    # CASO O USUÁRIO DIGITE UMA OPÇÃO INVÁLIDA 
     else:
         print("Opção inválida. Por favor, escolha uma opção válida.")
